@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biruntha - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="animations.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <h1><a href="index.html">Biruntha</a></h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-bg-animation"></div>
+        <div class="hero-content">
+            <img src="../images/myphoto.jpg" alt="Profile Photo" class="profile-img animate-fade-in">
+            <div class="hero-text">
+                <h2 class="animate-slide-up">Welcome to My Portfolio</h2>
+                <p class="animate-slide-up-delay">Developer & Problem Solver</p>
+                <a href="projects.html" class="cta-btn animate-bounce">View My Work</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>I am a frontend developer currently interning at Arjava Technology. I am a Hope3 Foundation student and studying 2nd year B.Sc. Computer Science at Nachiappa Swamigal Arts and Science College. I build interactive web and mobile apps using HTML, Dart, and Flutter. I enjoy creating user-friendly interfaces and learning new frontend technologies.</p>
+        </div>
+    </section>
+
+    <section class="skills">
+        <div class="container">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <p>Dart • HTML • C • C++ • MySQL</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Tools</h3>
+                    <p>Flutter • VS Code • Firebase</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Soft Skills</h3>
+                    <p>Team Player • Problem Solving • Passionate about Coding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="../images/chemistryquiz.jpg" alt="Chemistry Quiz">
+                    <h3>Chemistry Quiz</h3>
+                    <p>Interactive quiz application for chemistry learning</p>
+                </div>
+                <div class="project-card">
+                    <img src="../images/connect3.jpg" alt="Connect 3">
+                    <h3>Connect 3</h3>
+                    <p>Strategic game implementation with AI opponent</p>
+                </div>
+                <div class="project-card">
+                    <h3>Flutter Login App</h3>
+                    <p>Built with Firebase authentication and clean UI design</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="projects.html" class="cta-btn">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="internship">
+        <div class="container">
+            <h2>Current Experience</h2>
+            <div class="experience-item">
+                <h3>Frontend Developer Intern - Arjava Technology</h3>
+                <p>Participating in development tasks and observing real-time project workflows. Learning about professional development environments and app structures. Gaining insights into corporate-level coding standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="floating-shapes">
+        <div class="shape" style="left: 10%; width: 80px; height: 80px; animation-delay: 0s;"></div>
+        <div class="shape" style="left: 20%; width: 120px; height: 120px; animation-delay: 2s;"></div>
+        <div class="shape" style="left: 35%; width: 60px; height: 60px; animation-delay: 4s;"></div>
+        <div class="shape" style="left: 50%; width: 100px; height: 100px; animation-delay: 6s;"></div>
+        <div class="shape" style="left: 70%; width: 90px; height: 90px; animation-delay: 8s;"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
