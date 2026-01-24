@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="phone-frame.css">
+    <link rel="stylesheet" href="portfolio_nav_fix.css">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 </head>
@@ -40,12 +42,29 @@
                     <a href="#contact" class="nav-btn">Contact</a>
                 </div>
             </div>
-            <div class="cover-right">
-                <img src="images/biruntha-artguru.png" alt="Biruntha" class="cover-photo animate-image">
+            <!-- Image removed as requested -->
+            <!-- Footer removed as requested -->
+        </div>
+    </section>
+    <!-- Hero Slider -->
+    <section id="hero-slider" class="hero-slider">
+        <div class="slider-container">
+            <div class="slides-wrapper">
+                <div class="slide active">
+                    <img src="images/slider_1.png" alt="Welcome">
+                </div>
+                <div class="slide">
+                    <img src="images/slider_2.png" alt="Connect">
+                    <a href="#about" class="slider-btn btn-left">About Me</a>
+                    <a href="#contact" class="slider-btn btn-right">Keep in Touch</a>
+                </div>
             </div>
-            <div class="cover-footer">
-                <h2>Biruntha</h2>
-                <p>Frontend Developer & Problem Solver</p>
+
+            <button class="slider-arrow next-arrow" aria-label="Next Slide">&#10095;</button>
+
+            <div class="slider-indicators">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
             </div>
         </div>
     </section>
@@ -79,14 +98,19 @@
                         <span>06</span>
                     </div>
                     <div class="toc-item">
-                        <span>Experience</span>
+                        <span>Project 4</span>
                         <span class="dots"></span>
                         <span>07</span>
                     </div>
                     <div class="toc-item">
-                        <span>Contact</span>
+                        <span>Experience</span>
                         <span class="dots"></span>
                         <span>08</span>
+                    </div>
+                    <div class="toc-item">
+                        <span>Contact</span>
+                        <span class="dots"></span>
+                        <span>09</span>
                     </div>
                 </div>
             </div>
@@ -135,15 +159,27 @@
                 </div>
             </div>
             <div class="project-images">
-                <div class="image-horizontal">
-                    <img src="images/Chemistry_Quiz/IMG-20251202-WA0016.jpg" alt="Chemistry Quiz"
-                        class="animate-image">
-                    <img src="images/Chemistry_Quiz/IMG-20251202-WA0017.jpg" alt="Chemistry Quiz UI"
-                        class="animate-image">
-                    <img src="images/Chemistry_Quiz/IMG-20251202-WA0018.jpg" alt="Chemistry Quiz Features"
-                        class="animate-image">
-                    <img src="images/Chemistry_Quiz/IMG-20251202-WA0019.jpg" alt="Chemistry Quiz Testing"
-                        class="animate-image">
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/Chemistry_Quiz/IMG-20251202-WA0016.jpg" alt="Chemistry Quiz">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/Chemistry_Quiz/IMG-20251202-WA0017.jpg" alt="Chemistry Quiz UI">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/Chemistry_Quiz/IMG-20251202-WA0018.jpg" alt="Chemistry Quiz Features">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/Chemistry_Quiz/IMG-20251202-WA0019.jpg" alt="Chemistry Quiz Testing">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -156,7 +192,6 @@
             <div class="project-grid">
                 <div class="project-info">
                     <h3>Connect 3</h3>
-                    <!-- <p class="project-year">2024 • Chennai</p> -->
                     <p class="project-description">Strategic game implementation with AI opponent. Features intelligent
                         gameplay mechanics and clean user interface design for engaging gaming experience. Built using
                         Flutter with custom game logic and interactive animations. Players can compete against smart AI
@@ -168,10 +203,17 @@
                     </div>
                 </div>
                 <div class="project-images">
-                    <div class="image-grid">
-                        <img src="images/connetgame/IMG-20251202-WA0012.jpg" alt="Connect 3" class="animate-image">
-                        <img src="images/connetgame/IMG-20251202-WA0013.jpg" alt="Connect 3 Gameplay"
-                            class="animate-image">
+                    <div class="project-gallery">
+                        <div class="gallery-item">
+                            <div class="phone-frame animate-image">
+                                <img src="images/connetgame/IMG-20251202-WA0012.jpg" alt="Connect 3">
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="phone-frame animate-image">
+                                <img src="images/connetgame/IMG-20251202-WA0013.jpg" alt="Connect 3 Gameplay">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -185,7 +227,6 @@
             <div class="project-grid">
                 <div class="project-info">
                     <h3>TO DO LIST</h3>
-                    <!-- <p class="project-year">2024 • Chennai</p> -->
                     <p class="project-description">Task management application built with Flutter and Firebase
                         integration. Features user authentication, real-time data synchronization, and intuitive task
                         organization. Includes priority levels, due dates, and completion tracking. Clean material
@@ -195,9 +236,74 @@
                     </div>
                 </div>
                 <div class="project-images">
-                    <div class="image-grid">
-                        <img src="images/todo/IMG-20251202-WA0004.jpg" alt="Todo List" class="animate-image">
-                        <img src="images/todo/IMG-20251202-WA0005.jpg" alt="Todo List UI" class="animate-image">
+                    <div class="project-gallery">
+                        <div class="gallery-item">
+                            <div class="phone-frame animate-image">
+                                <img src="images/todo/IMG-20251202-WA0004.jpg" alt="Todo List">
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="phone-frame animate-image">
+                                <img src="images/todo/IMG-20251202-WA0005.jpg" alt="Todo List UI">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 4: Crew Call -->
+    <section class="page project-page">
+        <div class="page-content">
+            <h2 class="page-title">Project 4</h2>
+            <div class="project-info">
+                <h3>Crew Call</h3>
+                <p class="project-description">Through this app, we can bring people together as a crew. In this app,
+                    two types of accounts can log in: Organizer and Talent. They can register by selecting their talent
+                    or skill. For an event, organizers can collect helping people by inviting them based on the talented
+                    person’s skills. There are both paid and non-paid opportunities, so talented people can also earn
+                    through this app.</p>
+                <div class="project-tech">
+                    <span>Flutter</span>
+                    <span>Event Management</span>
+                    <span>Networking</span>
+                </div>
+            </div>
+            <div class="project-images">
+                <div class="project-gallery">
+                    <!-- <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/crewcall/WhatsApp Image 2026-01-24 at 00.00.45.jpeg" alt="Crew Call UI">
+                        </div>
+                    </div> -->
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/crewcall/WhatsApp Image 2026-01-24 at 00.00.45 (1).jpeg"
+                                alt="Crew Call Login">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/crewcall/WhatsApp Image 2026-01-24 at 00.00.45.jpeg" alt="Crew Call UI">
+                        </div>
+                    </div>
+                    <!-- <div class="gallery-item">
+                         <div class="phone-frame animate-image">
+                            <img src="images/crewcall/WhatsApp Image 2026-01-24 at 00.00.45 (2).jpeg" alt="Crew Call Dashboard">
+                        </div>
+                    </div> -->
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/crewcall/WhatsApp Image 2026-01-24 at 00.00.45 (3).jpeg"
+                                alt="Crew Call Profile">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/crewcall/WhatsApp Image 2026-01-24 at 00.00.45 (2).jpeg"
+                                alt="Crew Call Dashboard">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -218,7 +324,7 @@
 <!-- Project 4 -->
 <section class="page project-page">
     <div class="page-content">
-        <h2 class="page-title">Project 4</h2>
+        <h2 class="page-title">Project 5</h2>
         <div class="project-grid">
             <div class="project-info">
                 <h3>TIC TAC TOE</h3>
@@ -233,10 +339,17 @@
                 </div>
             </div>
             <div class="project-images">
-                <div class="image-grid">
-                    <img src="images/tictactoe/IMG-20251202-WA0008.jpg" alt="Tic Tac Toe" class="animate-image">
-                    <img src="images/tictactoe/IMG-20251202-WA0009.jpg" alt="Tic Tac Toe Gameplay"
-                        class="animate-image">
+                <div class="project-gallery">
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/tictactoe/IMG-20251202-WA0008.jpg" alt="Tic Tac Toe">
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <div class="phone-frame animate-image">
+                            <img src="images/tictactoe/IMG-20251202-WA0009.jpg" alt="Tic Tac Toe Gameplay">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -254,6 +367,19 @@
                 <p class="experience-description">Participating in development tasks and observing real-time project
                     workflows. Learning about professional development environments and app structures. Gaining insights
                     into corporate-level coding standards.</p>
+            </div>
+
+            <div class="experience-item">
+                <h3>Frontend Developer</h3>
+                <p class="company">HOPE3 Services • Present • 2026 • Karaikudi</p>
+                <p class="experience-description">Currently working as a Frontend Developer at Hope3 Services,
+                    contributing to multiple live projects. Actively involved in developing and maintaining the Hope3
+                    official website, the Hope3 English learning application, and a marketing-focused
+                    application.<br><br>Responsible for translating UI/UX designs into responsive, user-friendly
+                    interfaces using modern frontend technologies. Collaborating with designers and backend teams to
+                    ensure smooth functionality, performance optimization, and consistent user experience across
+                    platforms. Gaining hands-on experience in real-world product development, scalable frontend
+                    architecture, and professional coding standards.</p>
             </div>
             <div class="testimonial">
                 <blockquote>"Biruntha demonstrates exceptional dedication to learning and shows great potential in

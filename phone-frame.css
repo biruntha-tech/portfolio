@@ -1,0 +1,111 @@
+/* Phone Frame Style - Xiaomi Mi 11i Style */
+.phone-frame {
+    position: relative;
+    width: 240px;
+    /* Standard width */
+    height: 480px;
+    /* Standard height */
+    border: 6px solid #1a1a1a;
+    /* Thinner dark bezel */
+    border-radius: 30px;
+    /* Slightly tighter corners */
+    background: #1a1a1a;
+    /* Bezel color */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Ensure content stays inside */
+    isolation: isolate;
+
+    /* Disable floating animation from 'animate-image' class */
+    animation: none !important;
+}
+
+.phone-frame:hover {
+    transform: translateY(-5px);
+    /* Subtle lift on hover only */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* The Punch-hole Camera */
+.phone-frame::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background: #000;
+    border-radius: 50%;
+    /* Perfect circle */
+    z-index: 10;
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.1);
+}
+
+/* Screen Content */
+.phone-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures image fills the frame */
+    border-radius: 24px;
+    /* Matches outer radius minus border */
+    display: block;
+    /* Reset previous img styles */
+    border: none !important;
+    background: none !important;
+    box-shadow: none !important;
+    filter: none !important;
+}
+
+/* Inner Reflection/Gloss */
+.phone-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* Update Flex/Grid Containers to handle frames */
+.image-horizontal,
+.image-grid {
+    align-items: center;
+    /* Center vertically */
+    padding: 20px 0;
+    /* Space for hover effects */
+}
+
+/* Override previous specific image sizes with frame size if needed */
+.image-horizontal .phone-frame,
+.image-grid .phone-frame {
+    flex: 0 0 auto;
+}
+
+/* Adjust for mobile - Keep the 2-column grid static */
+@media (max-width: 768px) {
+    .phone-frame {
+        width: 100%;
+        /* Resize for grid */
+        height: auto;
+        aspect-ratio: 9/19;
+        /* Maintain phone ratio */
+        border-width: 4px;
+        /* Even thinner on mobile */
+        border-radius: 16px;
+    }
+
+    .phone-frame img {
+        border-radius: 12px;
+    }
+
+    .phone-frame::before {
+        width: 8px;
+        height: 8px;
+        top: 6px;
+    }
+}
